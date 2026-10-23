@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "lib": ["ES2022"],
+    "types": ["node", "vscode"]
+  },
+  "include": ["src/**/*.ts", "test/unit/**/*.ts", "test/live/**/*.ts", "vitest.config.mts", "vitest.live.config.mts"],
+  "exclude": ["src/webview/**", "test/unit/sanitize.test.ts"]
+}

@@ -1,0 +1,47 @@
+{
+  "data": {
+    "node": {
+      "views": {
+        "nodes": [
+          {
+            "id": "PVTV_lAHOBCq4Uc4Bm3B-zgMCvSo",
+            "number": 1,
+            "name": "Table",
+            "layout": "TABLE_LAYOUT",
+            "filter": "",
+            "verticalGroupByFields": {
+              "nodes": [],
+              "pageInfo": {
+                "endCursor": null,
+                "hasNextPage": false
+              }
+            }
+          },
+          {
+            "id": "PVTV_lAHOBCq4Uc4Bm3B-zgMCwuU",
+            "number": 2,
+            "name": "Board",
+            "layout": "BOARD_LAYOUT",
+            "filter": "",
+            "verticalGroupByFields": {
+              "nodes": [
+                {
+                  "id": "PVTSSF_lAHOBCq4Uc4Bm3B-zhleRwQ",
+                  "name": "Status"
+                }
+              ],
+              "pageInfo": {
+                "endCursor": "MQ",
+                "hasNextPage": false
+              }
+            }
+          }
+        ],
+        "pageInfo": {
+          "endCursor": "Mg",
+          "hasNextPage": false
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "ghp-screenshot-harness",
+  "publisher": "local",
+  "version": "0.0.0",
+  "private": true,
+  "engines": { "vscode": "^1.99.0" },
+  "activationEvents": ["onStartupFinished"],
+  "main": "./extension.js",
+  "extensionDependencies": ["guilletin63.vscode-gh-projects"]
+}

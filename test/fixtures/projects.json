@@ -1,0 +1,51 @@
+{
+  "data": {
+    "repositoryOwner": {
+      "login": "octo-user",
+      "projectsV2": {
+        "nodes": [
+          {
+            "id": "PVT_kwHOBCq4Uc4BStIu",
+            "number": 1,
+            "title": "Other project 1",
+            "url": "https://github.com/users/octo-user/projects/1",
+            "closed": false,
+            "shortDescription": "Sample project description",
+            "updatedAt": "2026-10-23T20:16:01Z",
+            "items": {
+              "totalCount": 81
+            }
+          },
+          {
+            "id": "PVT_kwHOBCq4Uc4Bm3B-",
+            "number": 2,
+            "title": "Sample project",
+            "url": "https://github.com/users/octo-user/projects/2",
+            "closed": false,
+            "shortDescription": "Sample project description",
+            "updatedAt": "2026-10-23T15:24:39Z",
+            "items": {
+              "totalCount": 158
+            }
+          },
+          {
+            "id": "PVT_kwHOBCq4Uc4BoSUH",
+            "number": 3,
+            "title": "Other project 2",
+            "url": "https://github.com/users/octo-user/projects/3",
+            "closed": false,
+            "shortDescription": "Sample project description",
+            "updatedAt": "2026-10-23T07:49:14Z",
+            "items": {
+              "totalCount": 13
+            }
+          }
+        ],
+        "pageInfo": {
+          "endCursor": "Mw",
+          "hasNextPage": false
+        }
+      }
+    }
+  }
+}

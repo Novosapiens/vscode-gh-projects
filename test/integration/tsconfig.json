@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "module": "CommonJS",
+    "moduleResolution": "Node10",
+    "ignoreDeprecations": "6.0",
+    "lib": ["ES2022"],
+    "types": ["node", "vscode", "mocha"],
+    "noEmit": false,
+    "outDir": "../../out/test/integration",
+    "rootDir": "."
+  },
+  "include": ["./**/*.ts"]
+}

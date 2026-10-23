@@ -1,0 +1,16 @@
+{
+  "data": {
+    "viewer": {
+      "login": "octo-user",
+      "name": "Name of octo-user",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/0?v=4",
+      "organizations": {
+        "nodes": [],
+        "pageInfo": {
+          "endCursor": null,
+          "hasNextPage": false
+        }
+      }
+    }
+  }
+}

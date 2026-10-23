@@ -1,0 +1,247 @@
+{
+  "data": {
+    "node": {
+      "id": "PVT_kwHOBCq4Uc4BoSUH",
+      "number": 3,
+      "title": "Other project 2",
+      "url": "https://github.com/users/octo-user/projects/3",
+      "shortDescription": "Sample project description",
+      "owner": {
+        "login": "octo-user"
+      },
+      "fields": {
+        "nodes": [
+          {
+            "__typename": "ProjectV2Field",
+            "id": "PVTF_lAHOBCq4Uc4BoSUHzhmzHKA",
+            "name": "Title",
+            "dataType": "TITLE"
+          },
+          {
+            "__typename": "ProjectV2Field",
+            "id": "PVTF_lAHOBCq4Uc4BoSUHzhmzHKE",
+            "name": "Assignees",
+            "dataType": "ASSIGNEES"
+          },
+          {
+            "__typename": "ProjectV2SingleSelectField",
+            "id": "PVTSSF_lAHOBCq4Uc4BoSUHzhmzHKI",
+            "name": "Status",
+            "dataType": "SINGLE_SELECT",
+            "options": [
+              {
+                "id": "f75ad846",
+                "name": "Todo",
+                "color": "GREEN",
+                "description": "This item hasn't been started"
+              },
+              {
+                "id": "47fc9ee4",
+                "name": "In Progress",
+                "color": "YELLOW",
+                "description": "This is actively being worked on"
+              },
+              {
+                "id": "98236657",
+                "name": "Done",
+                "color": "PURPLE",
+                "description": "This has been completed"
+              }
+            ]
+          },
+          {
+            "__typename": "ProjectV2Field",
+            "id": "PVTF_lAHOBCq4Uc4BoSUHzhmzHKM",
+            "name": "Labels",
+            "dataType": "LABELS"
+          },
+          {
+            "__typename": "ProjectV2Field",
+            "id": "PVTF_lAHOBCq4Uc4BoSUHzhmzHKQ",
+            "name": "Linked pull requests",
+            "dataType": "LINKED_PULL_REQUESTS"
+          },
+          {
+            "__typename": "ProjectV2Field",
+            "id": "PVTF_lAHOBCq4Uc4BoSUHzhmzHKU",
+            "name": "Milestone",
+            "dataType": "MILESTONE"
+          },
+          {
+            "__typename": "ProjectV2Field",
+            "id": "PVTF_lAHOBCq4Uc4BoSUHzhmzHKY",
+            "name": "Repository",
+            "dataType": "REPOSITORY"
+          },
+          {
+            "__typename": "ProjectV2Field",
+            "id": "PVTF_lAHOBCq4Uc4BoSUHzhmzHKg",
+            "name": "Reviewers",
+            "dataType": "REVIEWERS"
+          },
+          {
+            "__typename": "ProjectV2Field",
+            "id": "PVTF_lAHOBCq4Uc4BoSUHzhmzHKk",
+            "name": "Parent issue",
+            "dataType": "PARENT_ISSUE"
+          },
+          {
+            "__typename": "ProjectV2Field",
+            "id": "PVTF_lAHOBCq4Uc4BoSUHzhmzHKo",
+            "name": "Sub-issues progress",
+            "dataType": "SUB_ISSUES_PROGRESS"
+          },
+          {
+            "__typename": "ProjectV2Field",
+            "id": "PVTF_lAHOBCq4Uc4BoSUHzhmzHKs",
+            "name": "Created",
+            "dataType": "CREATED"
+          },
+          {
+            "__typename": "ProjectV2Field",
+            "id": "PVTF_lAHOBCq4Uc4BoSUHzhmzHKw",
+            "name": "Updated",
+            "dataType": "UPDATED"
+          },
+          {
+            "__typename": "ProjectV2Field",
+            "id": "PVTF_lAHOBCq4Uc4BoSUHzhmzHK0",
+            "name": "Closed",
+            "dataType": "CLOSED"
+          },
+          {
+            "__typename": "ProjectV2SingleSelectField",
+            "id": "PVTSSF_lAHOBCq4Uc4BoSUHzhmzHOM",
+            "name": "Priority",
+            "dataType": "SINGLE_SELECT",
+            "options": [
+              {
+                "id": "bfd5a372",
+                "name": "P0",
+                "color": "GRAY",
+                "description": ""
+              },
+              {
+                "id": "5ca9b56d",
+                "name": "P1",
+                "color": "GRAY",
+                "description": ""
+              },
+              {
+                "id": "5366e31c",
+                "name": "P2",
+                "color": "GRAY",
+                "description": ""
+              }
+            ]
+          },
+          {
+            "__typename": "ProjectV2SingleSelectField",
+            "id": "PVTSSF_lAHOBCq4Uc4BoSUHzhmzHOg",
+            "name": "Size",
+            "dataType": "SINGLE_SELECT",
+            "options": [
+              {
+                "id": "0ba56a33",
+                "name": "XS",
+                "color": "GRAY",
+                "description": ""
+              },
+              {
+                "id": "cc282afe",
+                "name": "S",
+                "color": "GRAY",
+                "description": ""
+              },
+              {
+                "id": "0cfd9fc3",
+                "name": "M",
+                "color": "GRAY",
+                "description": ""
+              },
+              {
+                "id": "28c76810",
+                "name": "L",
+                "color": "GRAY",
+                "description": ""
+              },
+              {
+                "id": "3a67f9e4",
+                "name": "XL",
+                "color": "GRAY",
+                "description": ""
+              }
+            ]
+          },
+          {
+            "__typename": "ProjectV2Field",
+            "id": "PVTF_lAHOBCq4Uc4BoSUHzhmzHOk",
+            "name": "Estimate",
+            "dataType": "NUMBER"
+          },
+          {
+            "__typename": "ProjectV2Field",
+            "id": "PVTF_lAHOBCq4Uc4BoSUHzhmzHPc",
+            "name": "Due",
+            "dataType": "DATE"
+          },
+          {
+            "__typename": "ProjectV2Field",
+            "id": "PVTF_lAHOBCq4Uc4BoSUHzhmzHRU",
+            "name": "Notes",
+            "dataType": "TEXT"
+          },
+          {
+            "__typename": "ProjectV2IterationField",
+            "id": "PVTIF_lAHOBCq4Uc4BoSUHzhmzHRw",
+            "name": "Sprint",
+            "dataType": "ITERATION",
+            "configuration": {
+              "iterations": [
+                {
+                  "id": "ba73412e",
+                  "title": "Sprint 1",
+                  "startDate": "2026-10-12",
+                  "duration": 14
+                },
+                {
+                  "id": "410738aa",
+                  "title": "Sprint 2",
+                  "startDate": "2026-10-26",
+                  "duration": 14
+                }
+              ],
+              "completedIterations": []
+            }
+          }
+        ],
+        "pageInfo": {
+          "endCursor": "MTk",
+          "hasNextPage": false
+        }
+      },
+      "views": {
+        "nodes": [
+          {
+            "id": "PVTV_lAHOBCq4Uc4BoSUHzgMMTSw",
+            "number": 1,
+            "name": "View 1",
+            "layout": "TABLE_LAYOUT",
+            "filter": null,
+            "verticalGroupByFields": {
+              "nodes": [],
+              "pageInfo": {
+                "endCursor": null,
+                "hasNextPage": false
+              }
+            }
+          }
+        ],
+        "pageInfo": {
+          "endCursor": "MQ",
+          "hasNextPage": false
+        }
+      }
+    }
+  }
+}

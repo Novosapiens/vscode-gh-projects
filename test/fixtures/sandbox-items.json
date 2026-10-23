@@ -1,0 +1,962 @@
+{
+  "data": {
+    "node": {
+      "items": {
+        "totalCount": 13,
+        "pageInfo": {
+          "endCursor": "Y3Vyc29yOnYyOpK5MDAwMDAwMDAuMDc2OTIzMDc2OTIzMDc2Oc4Qs-xk",
+          "hasNextPage": false
+        },
+        "nodes": [
+          {
+            "id": "PVTI_lAHOBCq4Uc4BoSUHzhCzoiY",
+            "type": "ISSUE",
+            "isArchived": false,
+            "updatedAt": "2026-10-22T20:41:53Z",
+            "content": {
+              "__typename": "Issue",
+              "id": "I_kwDOVT4Nhs8AAAABZMEKoA",
+              "number": 1,
+              "title": "Sample Issue 1",
+              "url": "https://github.com/octo-user/repo-2/issues/1",
+              "state": "CLOSED",
+              "stateReason": "COMPLETED",
+              "repository": {
+                "nameWithOwner": "octo-user/repo-2"
+              },
+              "labels": {
+                "nodes": [
+                  {
+                    "name": "label-18",
+                    "color": "5319e7"
+                  }
+                ],
+                "pageInfo": {
+                  "endCursor": "MQ",
+                  "hasNextPage": false
+                }
+              },
+              "assignees": {
+                "nodes": [],
+                "pageInfo": {
+                  "endCursor": null,
+                  "hasNextPage": false
+                }
+              }
+            },
+            "fieldValues": {
+              "pageInfo": {
+                "endCursor": "Ng",
+                "hasNextPage": false
+              },
+              "nodes": [
+                {
+                  "__typename": "ProjectV2ItemFieldRepositoryValue"
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldLabelValue"
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldPullRequestValue"
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldTextValue",
+                  "text": "Sample text 159",
+                  "field": {
+                    "id": "PVTF_lAHOBCq4Uc4BoSUHzhmzHKA"
+                  }
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldSingleSelectValue",
+                  "optionId": "98236657",
+                  "name": "Done",
+                  "field": {
+                    "id": "PVTSSF_lAHOBCq4Uc4BoSUHzhmzHKI"
+                  }
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldIterationValue",
+                  "iterationId": "ba73412e",
+                  "title": "Sprint 1",
+                  "startDate": "2026-10-12",
+                  "duration": 14,
+                  "field": {
+                    "id": "PVTIF_lAHOBCq4Uc4BoSUHzhmzHRw"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": "PVTI_lAHOBCq4Uc4BoSUHzhCzojw",
+            "type": "ISSUE",
+            "isArchived": false,
+            "updatedAt": "2026-10-23T07:17:34Z",
+            "content": {
+              "__typename": "Issue",
+              "id": "I_kwDOVT4Nhs8AAAABZMEL-Q",
+              "number": 2,
+              "title": "Sample Issue 2",
+              "url": "https://github.com/octo-user/repo-2/issues/2",
+              "state": "CLOSED",
+              "stateReason": "COMPLETED",
+              "repository": {
+                "nameWithOwner": "octo-user/repo-2"
+              },
+              "labels": {
+                "nodes": [
+                  {
+                    "name": "label-18",
+                    "color": "5319e7"
+                  }
+                ],
+                "pageInfo": {
+                  "endCursor": "MQ",
+                  "hasNextPage": false
+                }
+              },
+              "assignees": {
+                "nodes": [],
+                "pageInfo": {
+                  "endCursor": null,
+                  "hasNextPage": false
+                }
+              }
+            },
+            "fieldValues": {
+              "pageInfo": {
+                "endCursor": "Ng",
+                "hasNextPage": false
+              },
+              "nodes": [
+                {
+                  "__typename": "ProjectV2ItemFieldRepositoryValue"
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldLabelValue"
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldPullRequestValue"
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldTextValue",
+                  "text": "Sample text 160",
+                  "field": {
+                    "id": "PVTF_lAHOBCq4Uc4BoSUHzhmzHKA"
+                  }
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldSingleSelectValue",
+                  "optionId": "47fc9ee4",
+                  "name": "In Progress",
+                  "field": {
+                    "id": "PVTSSF_lAHOBCq4Uc4BoSUHzhmzHKI"
+                  }
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldIterationValue",
+                  "iterationId": "ba73412e",
+                  "title": "Sprint 1",
+                  "startDate": "2026-10-12",
+                  "duration": 14,
+                  "field": {
+                    "id": "PVTIF_lAHOBCq4Uc4BoSUHzhmzHRw"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": "PVTI_lAHOBCq4Uc4BoSUHzhCzolk",
+            "type": "ISSUE",
+            "isArchived": false,
+            "updatedAt": "2026-10-23T07:16:38Z",
+            "content": {
+              "__typename": "Issue",
+              "id": "I_kwDOVT4Nhs8AAAABZMEN3A",
+              "number": 3,
+              "title": "Sample Issue 3",
+              "url": "https://github.com/octo-user/repo-2/issues/3",
+              "state": "CLOSED",
+              "stateReason": "COMPLETED",
+              "repository": {
+                "nameWithOwner": "octo-user/repo-2"
+              },
+              "labels": {
+                "nodes": [
+                  {
+                    "name": "label-18",
+                    "color": "5319e7"
+                  }
+                ],
+                "pageInfo": {
+                  "endCursor": "MQ",
+                  "hasNextPage": false
+                }
+              },
+              "assignees": {
+                "nodes": [],
+                "pageInfo": {
+                  "endCursor": null,
+                  "hasNextPage": false
+                }
+              }
+            },
+            "fieldValues": {
+              "pageInfo": {
+                "endCursor": "Ng",
+                "hasNextPage": false
+              },
+              "nodes": [
+                {
+                  "__typename": "ProjectV2ItemFieldRepositoryValue"
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldLabelValue"
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldPullRequestValue"
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldTextValue",
+                  "text": "Sample text 161",
+                  "field": {
+                    "id": "PVTF_lAHOBCq4Uc4BoSUHzhmzHKA"
+                  }
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldSingleSelectValue",
+                  "optionId": "47fc9ee4",
+                  "name": "In Progress",
+                  "field": {
+                    "id": "PVTSSF_lAHOBCq4Uc4BoSUHzhmzHKI"
+                  }
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldIterationValue",
+                  "iterationId": "ba73412e",
+                  "title": "Sprint 1",
+                  "startDate": "2026-10-12",
+                  "duration": 14,
+                  "field": {
+                    "id": "PVTIF_lAHOBCq4Uc4BoSUHzhmzHRw"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": "PVTI_lAHOBCq4Uc4BoSUHzhCzooA",
+            "type": "ISSUE",
+            "isArchived": false,
+            "updatedAt": "2026-10-23T07:16:44Z",
+            "content": {
+              "__typename": "Issue",
+              "id": "I_kwDOVT4Nhs8AAAABZMEPhw",
+              "number": 4,
+              "title": "Sample Issue 4",
+              "url": "https://github.com/octo-user/repo-2/issues/4",
+              "state": "CLOSED",
+              "stateReason": "COMPLETED",
+              "repository": {
+                "nameWithOwner": "octo-user/repo-2"
+              },
+              "labels": {
+                "nodes": [
+                  {
+                    "name": "label-18",
+                    "color": "5319e7"
+                  }
+                ],
+                "pageInfo": {
+                  "endCursor": "MQ",
+                  "hasNextPage": false
+                }
+              },
+              "assignees": {
+                "nodes": [],
+                "pageInfo": {
+                  "endCursor": null,
+                  "hasNextPage": false
+                }
+              }
+            },
+            "fieldValues": {
+              "pageInfo": {
+                "endCursor": "Ng",
+                "hasNextPage": false
+              },
+              "nodes": [
+                {
+                  "__typename": "ProjectV2ItemFieldRepositoryValue"
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldLabelValue"
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldPullRequestValue"
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldTextValue",
+                  "text": "Sample text 162",
+                  "field": {
+                    "id": "PVTF_lAHOBCq4Uc4BoSUHzhmzHKA"
+                  }
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldSingleSelectValue",
+                  "optionId": "47fc9ee4",
+                  "name": "In Progress",
+                  "field": {
+                    "id": "PVTSSF_lAHOBCq4Uc4BoSUHzhmzHKI"
+                  }
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldIterationValue",
+                  "iterationId": "ba73412e",
+                  "title": "Sprint 1",
+                  "startDate": "2026-10-12",
+                  "duration": 14,
+                  "field": {
+                    "id": "PVTIF_lAHOBCq4Uc4BoSUHzhmzHRw"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": "PVTI_lAHOBCq4Uc4BoSUHzhCzop4",
+            "type": "ISSUE",
+            "isArchived": false,
+            "updatedAt": "2026-10-23T07:39:57Z",
+            "content": {
+              "__typename": "Issue",
+              "id": "I_kwDOVT4Nhs8AAAABZMERRw",
+              "number": 5,
+              "title": "Sample Issue 5",
+              "url": "https://github.com/octo-user/repo-2/issues/5",
+              "state": "CLOSED",
+              "stateReason": "COMPLETED",
+              "repository": {
+                "nameWithOwner": "octo-user/repo-2"
+              },
+              "labels": {
+                "nodes": [
+                  {
+                    "name": "label-18",
+                    "color": "5319e7"
+                  }
+                ],
+                "pageInfo": {
+                  "endCursor": "MQ",
+                  "hasNextPage": false
+                }
+              },
+              "assignees": {
+                "nodes": [],
+                "pageInfo": {
+                  "endCursor": null,
+                  "hasNextPage": false
+                }
+              }
+            },
+            "fieldValues": {
+              "pageInfo": {
+                "endCursor": "OQ",
+                "hasNextPage": false
+              },
+              "nodes": [
+                {
+                  "__typename": "ProjectV2ItemFieldRepositoryValue"
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldLabelValue"
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldPullRequestValue"
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldTextValue",
+                  "text": "Sample text 163",
+                  "field": {
+                    "id": "PVTF_lAHOBCq4Uc4BoSUHzhmzHKA"
+                  }
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldSingleSelectValue",
+                  "optionId": "98236657",
+                  "name": "Done",
+                  "field": {
+                    "id": "PVTSSF_lAHOBCq4Uc4BoSUHzhmzHKI"
+                  }
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldIterationValue",
+                  "iterationId": "410738aa",
+                  "title": "Sprint 2",
+                  "startDate": "2026-10-26",
+                  "duration": 14,
+                  "field": {
+                    "id": "PVTIF_lAHOBCq4Uc4BoSUHzhmzHRw"
+                  }
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldSingleSelectValue",
+                  "optionId": "bfd5a372",
+                  "name": "P0",
+                  "field": {
+                    "id": "PVTSSF_lAHOBCq4Uc4BoSUHzhmzHOM"
+                  }
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldSingleSelectValue",
+                  "optionId": "0cfd9fc3",
+                  "name": "M",
+                  "field": {
+                    "id": "PVTSSF_lAHOBCq4Uc4BoSUHzhmzHOg"
+                  }
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldNumberValue",
+                  "number": 5,
+                  "field": {
+                    "id": "PVTF_lAHOBCq4Uc4BoSUHzhmzHOk"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": "PVTI_lAHOBCq4Uc4BoSUHzhCzotI",
+            "type": "ISSUE",
+            "isArchived": false,
+            "updatedAt": "2026-10-23T07:44:30Z",
+            "content": {
+              "__typename": "Issue",
+              "id": "I_kwDOVT4Nhs8AAAABZMESvw",
+              "number": 6,
+              "title": "Sample Issue 6",
+              "url": "https://github.com/octo-user/repo-2/issues/6",
+              "state": "CLOSED",
+              "stateReason": "COMPLETED",
+              "repository": {
+                "nameWithOwner": "octo-user/repo-2"
+              },
+              "labels": {
+                "nodes": [
+                  {
+                    "name": "label-18",
+                    "color": "5319e7"
+                  }
+                ],
+                "pageInfo": {
+                  "endCursor": "MQ",
+                  "hasNextPage": false
+                }
+              },
+              "assignees": {
+                "nodes": [],
+                "pageInfo": {
+                  "endCursor": null,
+                  "hasNextPage": false
+                }
+              }
+            },
+            "fieldValues": {
+              "pageInfo": {
+                "endCursor": "OQ",
+                "hasNextPage": false
+              },
+              "nodes": [
+                {
+                  "__typename": "ProjectV2ItemFieldRepositoryValue"
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldLabelValue"
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldPullRequestValue"
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldTextValue",
+                  "text": "Sample text 164",
+                  "field": {
+                    "id": "PVTF_lAHOBCq4Uc4BoSUHzhmzHKA"
+                  }
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldSingleSelectValue",
+                  "optionId": "98236657",
+                  "name": "Done",
+                  "field": {
+                    "id": "PVTSSF_lAHOBCq4Uc4BoSUHzhmzHKI"
+                  }
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldIterationValue",
+                  "iterationId": "410738aa",
+                  "title": "Sprint 2",
+                  "startDate": "2026-10-26",
+                  "duration": 14,
+                  "field": {
+                    "id": "PVTIF_lAHOBCq4Uc4BoSUHzhmzHRw"
+                  }
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldSingleSelectValue",
+                  "optionId": "5ca9b56d",
+                  "name": "P1",
+                  "field": {
+                    "id": "PVTSSF_lAHOBCq4Uc4BoSUHzhmzHOM"
+                  }
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldSingleSelectValue",
+                  "optionId": "28c76810",
+                  "name": "L",
+                  "field": {
+                    "id": "PVTSSF_lAHOBCq4Uc4BoSUHzhmzHOg"
+                  }
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldNumberValue",
+                  "number": 8,
+                  "field": {
+                    "id": "PVTF_lAHOBCq4Uc4BoSUHzhmzHOk"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": "PVTI_lAHOBCq4Uc4BoSUHzhCzowo",
+            "type": "ISSUE",
+            "isArchived": false,
+            "updatedAt": "2026-10-23T07:49:14Z",
+            "content": {
+              "__typename": "Issue",
+              "id": "I_kwDOVT4Nhs8AAAABZMEo_A",
+              "number": 7,
+              "title": "Sample Issue 7",
+              "url": "https://github.com/octo-user/repo-2/issues/7",
+              "state": "CLOSED",
+              "stateReason": "COMPLETED",
+              "repository": {
+                "nameWithOwner": "octo-user/repo-2"
+              },
+              "labels": {
+                "nodes": [
+                  {
+                    "name": "label-18",
+                    "color": "5319e7"
+                  }
+                ],
+                "pageInfo": {
+                  "endCursor": "MQ",
+                  "hasNextPage": false
+                }
+              },
+              "assignees": {
+                "nodes": [],
+                "pageInfo": {
+                  "endCursor": null,
+                  "hasNextPage": false
+                }
+              }
+            },
+            "fieldValues": {
+              "pageInfo": {
+                "endCursor": "OQ",
+                "hasNextPage": false
+              },
+              "nodes": [
+                {
+                  "__typename": "ProjectV2ItemFieldRepositoryValue"
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldLabelValue"
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldPullRequestValue"
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldTextValue",
+                  "text": "Sample text 165",
+                  "field": {
+                    "id": "PVTF_lAHOBCq4Uc4BoSUHzhmzHKA"
+                  }
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldSingleSelectValue",
+                  "optionId": "98236657",
+                  "name": "Done",
+                  "field": {
+                    "id": "PVTSSF_lAHOBCq4Uc4BoSUHzhmzHKI"
+                  }
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldIterationValue",
+                  "iterationId": "410738aa",
+                  "title": "Sprint 2",
+                  "startDate": "2026-10-26",
+                  "duration": 14,
+                  "field": {
+                    "id": "PVTIF_lAHOBCq4Uc4BoSUHzhmzHRw"
+                  }
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldSingleSelectValue",
+                  "optionId": "5366e31c",
+                  "name": "P2",
+                  "field": {
+                    "id": "PVTSSF_lAHOBCq4Uc4BoSUHzhmzHOM"
+                  }
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldSingleSelectValue",
+                  "optionId": "cc282afe",
+                  "name": "S",
+                  "field": {
+                    "id": "PVTSSF_lAHOBCq4Uc4BoSUHzhmzHOg"
+                  }
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldNumberValue",
+                  "number": 3,
+                  "field": {
+                    "id": "PVTF_lAHOBCq4Uc4BoSUHzhmzHOk"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": "PVTI_lAHOBCq4Uc4BoSUHzhCzo0M",
+            "type": "PULL_REQUEST",
+            "isArchived": false,
+            "updatedAt": "2026-10-23T07:17:52Z",
+            "content": {
+              "__typename": "PullRequest",
+              "id": "PR_kwDOVT4Nhs8AAAABKGEMtg",
+              "number": 8,
+              "title": "Sample PullRequest 8",
+              "url": "https://github.com/octo-user/repo-2/pull/8",
+              "state": "MERGED",
+              "isDraft": false,
+              "repository": {
+                "nameWithOwner": "octo-user/repo-2"
+              },
+              "labels": {
+                "nodes": [],
+                "pageInfo": {
+                  "endCursor": null,
+                  "hasNextPage": false
+                }
+              },
+              "assignees": {
+                "nodes": [],
+                "pageInfo": {
+                  "endCursor": null,
+                  "hasNextPage": false
+                }
+              }
+            },
+            "fieldValues": {
+              "pageInfo": {
+                "endCursor": "NA",
+                "hasNextPage": false
+              },
+              "nodes": [
+                {
+                  "__typename": "ProjectV2ItemFieldRepositoryValue"
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldTextValue",
+                  "text": "Sample text 166",
+                  "field": {
+                    "id": "PVTF_lAHOBCq4Uc4BoSUHzhmzHKA"
+                  }
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldSingleSelectValue",
+                  "optionId": "98236657",
+                  "name": "Done",
+                  "field": {
+                    "id": "PVTSSF_lAHOBCq4Uc4BoSUHzhmzHKI"
+                  }
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldIterationValue",
+                  "iterationId": "ba73412e",
+                  "title": "Sprint 1",
+                  "startDate": "2026-10-12",
+                  "duration": 14,
+                  "field": {
+                    "id": "PVTIF_lAHOBCq4Uc4BoSUHzhmzHRw"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": "PVTI_lAHOBCq4Uc4BoSUHzhCzo20",
+            "type": "DRAFT_ISSUE",
+            "isArchived": false,
+            "updatedAt": "2026-10-22T19:13:53Z",
+            "content": {
+              "__typename": "DraftIssue",
+              "id": "DI_lAHOBCq4Uc4BoSUHzgLdhnY",
+              "title": "Sample DraftIssue 167",
+              "assignees": {
+                "nodes": [],
+                "pageInfo": {
+                  "endCursor": null,
+                  "hasNextPage": false
+                }
+              }
+            },
+            "fieldValues": {
+              "pageInfo": {
+                "endCursor": "Mg",
+                "hasNextPage": false
+              },
+              "nodes": [
+                {
+                  "__typename": "ProjectV2ItemFieldTextValue",
+                  "text": "Sample text 168",
+                  "field": {
+                    "id": "PVTF_lAHOBCq4Uc4BoSUHzhmzHKA"
+                  }
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldSingleSelectValue",
+                  "optionId": "f75ad846",
+                  "name": "Todo",
+                  "field": {
+                    "id": "PVTSSF_lAHOBCq4Uc4BoSUHzhmzHKI"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": "PVTI_lAHOBCq4Uc4BoSUHzhCzo5E",
+            "type": "DRAFT_ISSUE",
+            "isArchived": false,
+            "updatedAt": "2026-10-22T19:14:07Z",
+            "content": {
+              "__typename": "DraftIssue",
+              "id": "DI_lAHOBCq4Uc4BoSUHzgLdhnc",
+              "title": "Sample DraftIssue 169",
+              "assignees": {
+                "nodes": [],
+                "pageInfo": {
+                  "endCursor": null,
+                  "hasNextPage": false
+                }
+              }
+            },
+            "fieldValues": {
+              "pageInfo": {
+                "endCursor": "Mg",
+                "hasNextPage": false
+              },
+              "nodes": [
+                {
+                  "__typename": "ProjectV2ItemFieldTextValue",
+                  "text": "Sample text 170",
+                  "field": {
+                    "id": "PVTF_lAHOBCq4Uc4BoSUHzhmzHKA"
+                  }
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldSingleSelectValue",
+                  "optionId": "f75ad846",
+                  "name": "Todo",
+                  "field": {
+                    "id": "PVTSSF_lAHOBCq4Uc4BoSUHzhmzHKI"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": "PVTI_lAHOBCq4Uc4BoSUHzhCzo7Y",
+            "type": "DRAFT_ISSUE",
+            "isArchived": false,
+            "updatedAt": "2026-10-22T19:13:56Z",
+            "content": {
+              "__typename": "DraftIssue",
+              "id": "DI_lAHOBCq4Uc4BoSUHzgLdhno",
+              "title": "Sample DraftIssue 171",
+              "assignees": {
+                "nodes": [],
+                "pageInfo": {
+                  "endCursor": null,
+                  "hasNextPage": false
+                }
+              }
+            },
+            "fieldValues": {
+              "pageInfo": {
+                "endCursor": "Mg",
+                "hasNextPage": false
+              },
+              "nodes": [
+                {
+                  "__typename": "ProjectV2ItemFieldTextValue",
+                  "text": "Sample text 172",
+                  "field": {
+                    "id": "PVTF_lAHOBCq4Uc4BoSUHzhmzHKA"
+                  }
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldSingleSelectValue",
+                  "optionId": "f75ad846",
+                  "name": "Todo",
+                  "field": {
+                    "id": "PVTSSF_lAHOBCq4Uc4BoSUHzhmzHKI"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": "PVTI_lAHOBCq4Uc4BoSUHzhCzpM0",
+            "type": "DRAFT_ISSUE",
+            "isArchived": false,
+            "updatedAt": "2026-10-22T20:47:20Z",
+            "content": {
+              "__typename": "DraftIssue",
+              "id": "DI_lAHOBCq4Uc4BoSUHzgLdhos",
+              "title": "Sample DraftIssue 173",
+              "assignees": {
+                "nodes": [
+                  {
+                    "login": "octo-user",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/0?v=4"
+                  }
+                ],
+                "pageInfo": {
+                  "endCursor": "MQ",
+                  "hasNextPage": false
+                }
+              }
+            },
+            "fieldValues": {
+              "pageInfo": {
+                "endCursor": "NQ",
+                "hasNextPage": false
+              },
+              "nodes": [
+                {
+                  "__typename": "ProjectV2ItemFieldUserValue"
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldTextValue",
+                  "text": "Sample text 174",
+                  "field": {
+                    "id": "PVTF_lAHOBCq4Uc4BoSUHzhmzHKA"
+                  }
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldSingleSelectValue",
+                  "optionId": "98236657",
+                  "name": "Done",
+                  "field": {
+                    "id": "PVTSSF_lAHOBCq4Uc4BoSUHzhmzHKI"
+                  }
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldIterationValue",
+                  "iterationId": "410738aa",
+                  "title": "Sprint 2",
+                  "startDate": "2026-10-26",
+                  "duration": 14,
+                  "field": {
+                    "id": "PVTIF_lAHOBCq4Uc4BoSUHzhmzHRw"
+                  }
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldSingleSelectValue",
+                  "optionId": "bfd5a372",
+                  "name": "P0",
+                  "field": {
+                    "id": "PVTSSF_lAHOBCq4Uc4BoSUHzhmzHOM"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": "PVTI_lAHOBCq4Uc4BoSUHzhCz7GQ",
+            "type": "DRAFT_ISSUE",
+            "isArchived": false,
+            "updatedAt": "2026-10-22T20:42:24Z",
+            "content": {
+              "__typename": "DraftIssue",
+              "id": "DI_lAHOBCq4Uc4BoSUHzgLdiaM",
+              "title": "Sample DraftIssue 175",
+              "assignees": {
+                "nodes": [
+                  {
+                    "login": "octo-user",
+                    "avatarUrl": "https://avatars.githubusercontent.com/u/0?v=4"
+                  }
+                ],
+                "pageInfo": {
+                  "endCursor": "MQ",
+                  "hasNextPage": false
+                }
+              }
+            },
+            "fieldValues": {
+              "pageInfo": {
+                "endCursor": "NQ",
+                "hasNextPage": false
+              },
+              "nodes": [
+                {
+                  "__typename": "ProjectV2ItemFieldUserValue"
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldTextValue",
+                  "text": "Sample text 176",
+                  "field": {
+                    "id": "PVTF_lAHOBCq4Uc4BoSUHzhmzHKA"
+                  }
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldSingleSelectValue",
+                  "optionId": "47fc9ee4",
+                  "name": "In Progress",
+                  "field": {
+                    "id": "PVTSSF_lAHOBCq4Uc4BoSUHzhmzHKI"
+                  }
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldIterationValue",
+                  "iterationId": "410738aa",
+                  "title": "Sprint 2",
+                  "startDate": "2026-10-26",
+                  "duration": 14,
+                  "field": {
+                    "id": "PVTIF_lAHOBCq4Uc4BoSUHzhmzHRw"
+                  }
+                },
+                {
+                  "__typename": "ProjectV2ItemFieldSingleSelectValue",
+                  "optionId": "0ba56a33",
+                  "name": "XS",
+                  "field": {
+                    "id": "PVTSSF_lAHOBCq4Uc4BoSUHzhmzHOg"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}

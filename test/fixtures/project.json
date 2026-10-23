@@ -1,0 +1,333 @@
+{
+  "data": {
+    "node": {
+      "id": "PVT_kwHOBCq4Uc4Bm3B-",
+      "number": 2,
+      "title": "Sample project",
+      "url": "https://github.com/users/octo-user/projects/2",
+      "shortDescription": "Sample project description",
+      "owner": {
+        "login": "octo-user"
+      },
+      "fields": {
+        "nodes": [
+          {
+            "__typename": "ProjectV2Field",
+            "id": "PVTF_lAHOBCq4Uc4Bm3B-zhleRwI",
+            "name": "Title",
+            "dataType": "TITLE"
+          },
+          {
+            "__typename": "ProjectV2Field",
+            "id": "PVTF_lAHOBCq4Uc4Bm3B-zhleRwM",
+            "name": "Assignees",
+            "dataType": "ASSIGNEES"
+          },
+          {
+            "__typename": "ProjectV2SingleSelectField",
+            "id": "PVTSSF_lAHOBCq4Uc4Bm3B-zhleRwQ",
+            "name": "Status",
+            "dataType": "SINGLE_SELECT",
+            "options": [
+              {
+                "id": "f75ad846",
+                "name": "Backlog",
+                "color": "GRAY",
+                "description": "Not yet prioritized for work"
+              },
+              {
+                "id": "db72954f",
+                "name": "Ready",
+                "color": "BLUE",
+                "description": ""
+              },
+              {
+                "id": "47fc9ee4",
+                "name": "In progress",
+                "color": "YELLOW",
+                "description": "This is actively being worked on"
+              },
+              {
+                "id": "d0f97523",
+                "name": "In review",
+                "color": "PURPLE",
+                "description": ""
+              },
+              {
+                "id": "98236657",
+                "name": "Done",
+                "color": "PURPLE",
+                "description": "This has been completed"
+              }
+            ]
+          },
+          {
+            "__typename": "ProjectV2Field",
+            "id": "PVTF_lAHOBCq4Uc4Bm3B-zhleRwU",
+            "name": "Labels",
+            "dataType": "LABELS"
+          },
+          {
+            "__typename": "ProjectV2Field",
+            "id": "PVTF_lAHOBCq4Uc4Bm3B-zhleRwY",
+            "name": "Linked pull requests",
+            "dataType": "LINKED_PULL_REQUESTS"
+          },
+          {
+            "__typename": "ProjectV2Field",
+            "id": "PVTF_lAHOBCq4Uc4Bm3B-zhleRwc",
+            "name": "Milestone",
+            "dataType": "MILESTONE"
+          },
+          {
+            "__typename": "ProjectV2Field",
+            "id": "PVTF_lAHOBCq4Uc4Bm3B-zhleRwg",
+            "name": "Repository",
+            "dataType": "REPOSITORY"
+          },
+          {
+            "__typename": "ProjectV2Field",
+            "id": "PVTF_lAHOBCq4Uc4Bm3B-zhleRwo",
+            "name": "Reviewers",
+            "dataType": "REVIEWERS"
+          },
+          {
+            "__typename": "ProjectV2Field",
+            "id": "PVTF_lAHOBCq4Uc4Bm3B-zhleRww",
+            "name": "Parent issue",
+            "dataType": "PARENT_ISSUE"
+          },
+          {
+            "__typename": "ProjectV2Field",
+            "id": "PVTF_lAHOBCq4Uc4Bm3B-zhleRw4",
+            "name": "Sub-issues progress",
+            "dataType": "SUB_ISSUES_PROGRESS"
+          },
+          {
+            "__typename": "ProjectV2Field",
+            "id": "PVTF_lAHOBCq4Uc4Bm3B-zhleRxA",
+            "name": "Created",
+            "dataType": "CREATED"
+          },
+          {
+            "__typename": "ProjectV2Field",
+            "id": "PVTF_lAHOBCq4Uc4Bm3B-zhleRxI",
+            "name": "Updated",
+            "dataType": "UPDATED"
+          },
+          {
+            "__typename": "ProjectV2Field",
+            "id": "PVTF_lAHOBCq4Uc4Bm3B-zhleRxQ",
+            "name": "Closed",
+            "dataType": "CLOSED"
+          },
+          {
+            "__typename": "ProjectV2SingleSelectField",
+            "id": "PVTSSF_lAHOBCq4Uc4Bm3B-zhleTWk",
+            "name": "Priority",
+            "dataType": "SINGLE_SELECT",
+            "options": [
+              {
+                "id": "dfb03384",
+                "name": "P0",
+                "color": "GRAY",
+                "description": ""
+              },
+              {
+                "id": "7bc4caf5",
+                "name": "P1",
+                "color": "GRAY",
+                "description": ""
+              },
+              {
+                "id": "65a62869",
+                "name": "P2",
+                "color": "GRAY",
+                "description": ""
+              }
+            ]
+          },
+          {
+            "__typename": "ProjectV2SingleSelectField",
+            "id": "PVTSSF_lAHOBCq4Uc4Bm3B-zhleTjM",
+            "name": "Size",
+            "dataType": "SINGLE_SELECT",
+            "options": [
+              {
+                "id": "cacb7fd7",
+                "name": "S",
+                "color": "GRAY",
+                "description": ""
+              },
+              {
+                "id": "39ffd04d",
+                "name": "M",
+                "color": "GRAY",
+                "description": ""
+              },
+              {
+                "id": "9209411a",
+                "name": "L",
+                "color": "GRAY",
+                "description": ""
+              }
+            ]
+          },
+          {
+            "__typename": "ProjectV2SingleSelectField",
+            "id": "PVTSSF_lAHOBCq4Uc4Bm3B-zhleTv0",
+            "name": "Custom field A",
+            "dataType": "SINGLE_SELECT",
+            "options": [
+              {
+                "id": "87e850ee",
+                "name": "Option 12",
+                "color": "GRAY",
+                "description": ""
+              },
+              {
+                "id": "70b34631",
+                "name": "Option 13",
+                "color": "GRAY",
+                "description": ""
+              },
+              {
+                "id": "ead60b08",
+                "name": "Option 14",
+                "color": "GRAY",
+                "description": ""
+              },
+              {
+                "id": "3c4d31ec",
+                "name": "Option 15",
+                "color": "GRAY",
+                "description": ""
+              },
+              {
+                "id": "2719cdb2",
+                "name": "Option 16",
+                "color": "GRAY",
+                "description": ""
+              }
+            ]
+          },
+          {
+            "__typename": "ProjectV2SingleSelectField",
+            "id": "PVTSSF_lAHOBCq4Uc4Bm3B-zhleT3Y",
+            "name": "Custom field B",
+            "dataType": "SINGLE_SELECT",
+            "options": [
+              {
+                "id": "e1bcc57d",
+                "name": "Option 17",
+                "color": "GRAY",
+                "description": ""
+              },
+              {
+                "id": "b8373994",
+                "name": "Option 18",
+                "color": "GRAY",
+                "description": ""
+              },
+              {
+                "id": "7630c155",
+                "name": "Option 19",
+                "color": "GRAY",
+                "description": ""
+              },
+              {
+                "id": "08111e3a",
+                "name": "Option 20",
+                "color": "GRAY",
+                "description": ""
+              },
+              {
+                "id": "7a49d283",
+                "name": "Option 21",
+                "color": "GRAY",
+                "description": ""
+              },
+              {
+                "id": "60441e83",
+                "name": "Option 22",
+                "color": "GRAY",
+                "description": ""
+              }
+            ]
+          },
+          {
+            "__typename": "ProjectV2SingleSelectField",
+            "id": "PVTSSF_lAHOBCq4Uc4Bm3B-zhmJm28",
+            "name": "Custom field C",
+            "dataType": "SINGLE_SELECT",
+            "options": [
+              {
+                "id": "fe7d825d",
+                "name": "Option 23",
+                "color": "GRAY",
+                "description": ""
+              },
+              {
+                "id": "52f768f3",
+                "name": "Option 24",
+                "color": "GRAY",
+                "description": ""
+              },
+              {
+                "id": "01cba4ca",
+                "name": "Option 25",
+                "color": "GRAY",
+                "description": ""
+              }
+            ]
+          }
+        ],
+        "pageInfo": {
+          "endCursor": "MTg",
+          "hasNextPage": false
+        }
+      },
+      "views": {
+        "nodes": [
+          {
+            "id": "PVTV_lAHOBCq4Uc4Bm3B-zgMCvSo",
+            "number": 1,
+            "name": "Table",
+            "layout": "TABLE_LAYOUT",
+            "filter": "",
+            "verticalGroupByFields": {
+              "nodes": [],
+              "pageInfo": {
+                "endCursor": null,
+                "hasNextPage": false
+              }
+            }
+          },
+          {
+            "id": "PVTV_lAHOBCq4Uc4Bm3B-zgMCwuU",
+            "number": 2,
+            "name": "Board",
+            "layout": "BOARD_LAYOUT",
+            "filter": "",
+            "verticalGroupByFields": {
+              "nodes": [
+                {
+                  "id": "PVTSSF_lAHOBCq4Uc4Bm3B-zhleRwQ",
+                  "name": "Status"
+                }
+              ],
+              "pageInfo": {
+                "endCursor": "MQ",
+                "hasNextPage": false
+              }
+            }
+          }
+        ],
+        "pageInfo": {
+          "endCursor": "Mg",
+          "hasNextPage": false
+        }
+      }
+    }
+  }
+}

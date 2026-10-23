@@ -1,0 +1,16 @@
+{
+  "data": {
+    "node": {
+      "id": "PVTI_lAHOBCq4Uc4BoSUHzhCzo20",
+      "content": {
+        "__typename": "DraftIssue",
+        "bodyHTML": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>",
+        "createdAt": "2026-10-22T19:13:50Z",
+        "creator": {
+          "login": "octo-user",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/0?v=4"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,198 @@
+{
+  "name": "vscode-gh-projects",
+  "displayName": "GitHub Projects Boards",
+  "description": "GitHub Projects (v2) boards inside VS Code: columns by Status, drag & drop, filters, item details and an in-progress counter.",
+  "version": "0.1.0",
+  "publisher": "guilletin63",
+  "license": "MIT",
+  "icon": "media/icon.png",
+  "galleryBanner": {
+    "color": "#24292f",
+    "theme": "dark"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/guilletin63/vscode-gh-projects.git"
+  },
+  "homepage": "https://github.com/guilletin63/vscode-gh-projects#readme",
+  "bugs": {
+    "url": "https://github.com/guilletin63/vscode-gh-projects/issues"
+  },
+  "engines": {
+    "vscode": "^1.99.0"
+  },
+  "categories": [
+    "Other",
+    "Visualization"
+  ],
+  "keywords": [
+    "github",
+    "github projects",
+    "projects v2",
+    "kanban",
+    "board",
+    "issues",
+    "pull requests"
+  ],
+  "extensionKind": [
+    "workspace",
+    "ui"
+  ],
+  "main": "./dist/extension.js",
+  "activationEvents": [
+    "onWebviewPanel:ghProjects.board"
+  ],
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "ghProjects",
+          "title": "GitHub Projects",
+          "icon": "media/projects.svg"
+        }
+      ]
+    },
+    "views": {
+      "ghProjects": [
+        {
+          "id": "ghProjects.projects",
+          "name": "Projects"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "ghProjects.signIn",
+        "title": "Sign in to GitHub",
+        "category": "GitHub Projects",
+        "icon": "$(sign-in)"
+      },
+      {
+        "command": "ghProjects.refresh",
+        "title": "Refresh",
+        "category": "GitHub Projects",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "ghProjects.addOwner",
+        "title": "Add Owner…",
+        "category": "GitHub Projects",
+        "icon": "$(add)"
+      },
+      {
+        "command": "ghProjects.removeOwner",
+        "title": "Remove Owner",
+        "category": "GitHub Projects",
+        "icon": "$(close)"
+      },
+      {
+        "command": "ghProjects.openBoard",
+        "title": "Open Board",
+        "category": "GitHub Projects",
+        "icon": "$(project)"
+      },
+      {
+        "command": "ghProjects.openOnGitHub",
+        "title": "Open on GitHub",
+        "category": "GitHub Projects",
+        "icon": "$(link-external)"
+      },
+      {
+        "command": "ghProjects.openLastBoard",
+        "title": "Open Last Board",
+        "category": "GitHub Projects",
+        "icon": "$(project)"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "ghProjects.addOwner",
+          "when": "view == ghProjects.projects && ghProjects.signedIn",
+          "group": "navigation@1"
+        },
+        {
+          "command": "ghProjects.refresh",
+          "when": "view == ghProjects.projects",
+          "group": "navigation@2"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "ghProjects.removeOwner",
+          "when": "view == ghProjects.projects && viewItem == owner.manual",
+          "group": "inline"
+        },
+        {
+          "command": "ghProjects.openOnGitHub",
+          "when": "view == ghProjects.projects && viewItem == project",
+          "group": "inline"
+        }
+      ],
+      "commandPalette": [
+        {
+          "command": "ghProjects.removeOwner",
+          "when": "false"
+        },
+        {
+          "command": "ghProjects.openOnGitHub",
+          "when": "false"
+        },
+        {
+          "command": "ghProjects.openBoard",
+          "when": "false"
+        }
+      ]
+    },
+    "viewsWelcome": [
+      {
+        "view": "ghProjects.projects",
+        "when": "!ghProjects.signedIn",
+        "contents": "Sign in with the GitHub account VS Code already knows to browse your Projects (v2) boards.\n[Sign in to GitHub](command:ghProjects.signIn)\nOnly the `read:project` and `repo` scopes are requested. Moving cards asks for `project` the first time."
+      }
+    ],
+    "configuration": {
+      "title": "GitHub Projects",
+      "properties": {
+        "ghProjects.refreshInterval": {
+          "type": "number",
+          "default": 0,
+          "minimum": 0,
+          "markdownDescription": "Seconds between automatic refreshes of visible boards and the status bar counter. `0` disables polling. Values below 30 are treated as 30. Polling pauses while the window is not focused and slows down when GitHub rate-limits."
+        },
+        "ghProjects.inProgressColumn": {
+          "type": "string",
+          "default": "In progress",
+          "markdownDescription": "Column (option of the Status-like field) counted in the status bar for items assigned to you. Case-insensitive."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "watch": "node scripts/build.mjs --watch",
+    "lint": "eslint .",
+    "typecheck": "tsc -p tsconfig.json && tsc -p src/webview/tsconfig.json && tsc -p test/integration/tsconfig.json --noEmit",
+    "test": "vitest run",
+    "test:integration": "npm run build && tsc -p test/integration/tsconfig.json && node out/test/integration/runTest.js",
+    "package": "vsce package --no-dependencies",
+    "vscode:prepublish": "npm run build -- --production",
+    "screenshot": "node scripts/screenshot.mjs",
+    "test:live": "GHP_LIVE_TOKEN=$(gh auth token) vitest run --config vitest.live.config.mts"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^22.0.0",
+    "@types/vscode": "~1.99.0",
+    "@vscode/test-electron": "^3.1.0",
+    "@vscode/vsce": "^4.0.0",
+    "esbuild": "^0.28.2",
+    "eslint": "^10.13.0",
+    "happy-dom": "^20.14.6",
+    "mocha": "^12.0.3",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.72.0",
+    "vitest": "^5.0.5"
+  }
+}
