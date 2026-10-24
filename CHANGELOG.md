@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.2.2
+
+- Fix: dragging cards and table rows with the mouse still didn't work in recent VS Code versions,
+  which cancel native drag & drop inside extension panels. Dragging now follows the pointer
+  (with [SortableJS](https://github.com/SortableJS/Sortable)) instead of native drag & drop, and
+  also works with touch. The spot where the item will land is shown while dragging.
+- Board columns now take the full height of the board, and a card can be dropped anywhere in a
+  column, including its empty space and "+ Add item" (before, only on the other cards).
+
 ## 1.2.1
 
 - Fix: dragging board cards and table rows with the mouse did nothing (the drag was cancelled as
