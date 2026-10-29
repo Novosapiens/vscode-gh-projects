@@ -4,7 +4,7 @@
 const vscode = require('vscode');
 
 exports.activate = async function activate() {
-  const ext = vscode.extensions.getExtension('novosapiens.vscode-gh-projects');
+  const ext = vscode.extensions.getExtension('novosapiens.github-projects-novosapiens');
   const api = await ext.activate();
   const token = process.env.GHP_HARNESS_TOKEN;
   if (token && typeof api.__setTokenProvider === 'function') {

@@ -6,6 +6,28 @@ import { getLog, reportError } from './notify';
 const LAST_CHECK_KEY = 'ghProjects.lastUpdateCheck';
 const DAY_MS = 24 * 60 * 60 * 1000;
 
+/** Earlier IDs of this build. They register the same commands, so only one can be installed. */
+const OLD_IDS = ['novosapiens.vscode-gh-projects'];
+
+/** Offers to uninstall an earlier ID of this build, e.g. a .vsix install from before the rename. */
+export async function offerToRemoveOldIds(): Promise<void> {
+  const installed = OLD_IDS.filter((id) => vscode.extensions.getExtension(id));
+  if (!installed.length) return;
+  const choice = await vscode.window.showWarningMessage(
+    `An older GitHub Projects build (${installed.join(', ')}) is also installed and registers the same commands. Uninstall it?`,
+    'Uninstall',
+  );
+  if (choice !== 'Uninstall') return;
+  try {
+    for (const id of installed) await vscode.commands.executeCommand('workbench.extensions.uninstallExtension', id);
+  } catch (err) {
+    void vscode.window.showErrorMessage(reportError('Uninstalling the older build', err));
+    return;
+  }
+  const reload = await vscode.window.showInformationMessage('Older build uninstalled. Reload the window to finish.', 'Reload Window');
+  if (reload === 'Reload Window') await vscode.commands.executeCommand('workbench.action.reloadWindow');
+}
+
 interface InstalledExtension {
   relativeLocation?: string;
   metadata?: { source?: string };

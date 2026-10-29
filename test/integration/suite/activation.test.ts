@@ -1,7 +1,7 @@
 import * as assert from 'node:assert';
 import * as vscode from 'vscode';
 
-const EXTENSION_ID = 'novosapiens.vscode-gh-projects';
+const EXTENSION_ID = 'novosapiens.github-projects-novosapiens';
 
 suite('activation', () => {
   test('extension activates', async () => {

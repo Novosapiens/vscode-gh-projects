@@ -1,8 +1,8 @@
 {
-  "name": "vscode-gh-projects",
+  "name": "github-projects-novosapiens",
   "displayName": "GitHub Projects (Novosapiens)",
   "description": "GitHub Projects (v2) inside VS Code: board, table and roadmap views, drag & drop, filters, item details and an in-progress counter.",
-  "version": "1.4.3",
+  "version": "1.4.5",
   "publisher": "novosapiens",
   "license": "MIT",
   "icon": "media/icon.png",

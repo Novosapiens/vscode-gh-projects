@@ -1,8 +1,14 @@
 # Changelog
 
+## 1.4.5
+
+- **On the Marketplace** as `novosapiens.github-projects-novosapiens`, kept up to date by VS Code.
+  The extension ID changed from `novosapiens.vscode-gh-projects` (the Marketplace needs a name
+  of its own): if the old one is installed, the extension offers to uninstall it. Owners you
+  added and the last opened board are kept per ID, so add them again.
+
 ## 1.4.3
 
-- **On the Marketplace** as `novosapiens.vscode-gh-projects`, kept up to date by VS Code.
 - **Check for updates** (`.vsix` installs of the Novosapiens build): once a day, or with **GitHub Projects: Check for
   Updates…**, the extension looks for a newer `novo-v*` release and offers to install it.
   Turn off with `ghProjects.checkForUpdates`.

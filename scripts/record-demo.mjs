@@ -32,7 +32,7 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const WIDTH = 1280;
 const HEIGHT = 800;
 
-const statusBarCounter = "[id=\"novosapiens.vscode-gh-projects.ghProjects.inProgress\"]";
+const statusBarCounter = "[id=\"novosapiens.github-projects-novosapiens.ghProjects.inProgress\"]";
 
 /** One recording session: dev host + frame capture + pointer state. */
 async function session({ steps }) {

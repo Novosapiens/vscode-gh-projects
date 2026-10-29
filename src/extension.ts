@@ -15,7 +15,7 @@ import type { ProjectDetails, ProjectItem } from './model/types';
 import { Poller } from './views/poller';
 import { StatusBarCounter } from './views/statusBar';
 import { onRateLimit } from './views/notify';
-import { Updater } from './views/updates';
+import { offerToRemoveOldIds, Updater } from './views/updates';
 
 /** Returned by activate(). The `__` members are test/screenshot hooks, not product API. */
 export interface ExtensionApi {
@@ -65,6 +65,7 @@ export function activate(context: vscode.ExtensionContext): ExtensionApi {
 
   const boardDeps = { extensionUri: context.extensionUri, getApi: () => api, workspaceState: context.workspaceState };
 
+  void offerToRemoveOldIds();
   const updater = new Updater(context);
   void updater.checkInBackground();
 

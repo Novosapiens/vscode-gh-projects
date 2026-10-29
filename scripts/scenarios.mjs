@@ -324,7 +324,7 @@ export const scenarios = {
       { webview: "(doc) => doc.querySelectorAll('.card').length > 0" },
       { webview: "(doc) => { doc.querySelector('.toolbar .icon-button[title=\"Refresh\"]')?.click(); return true; }" },
       { eval: "new Promise((r) => setTimeout(r, 6000)).then(() => true)" },
-      { waitFor: "!!document.querySelector('[id=\"novosapiens.vscode-gh-projects.ghProjects.inProgress\"]')" },
+      { waitFor: "!!document.querySelector('[id=\"novosapiens.github-projects-novosapiens.ghProjects.inProgress\"]')" },
     ],
   },
   // WRITES to the sandbox: opens a draft and sets Priority to P0 from the detail panel.
@@ -356,7 +356,7 @@ export const scenarios = {
     waitFor: webviewShown,
     actions: [
       { webview: "(doc) => doc.querySelectorAll('.card').length > 0" },
-      { waitFor: "/[1-9]\\d* in progress/.test(document.querySelector('[id=\"novosapiens.vscode-gh-projects.ghProjects.inProgress\"]')?.textContent ?? '')" },
+      { waitFor: "/[1-9]\\d* in progress/.test(document.querySelector('[id=\"novosapiens.github-projects-novosapiens.ghProjects.inProgress\"]')?.textContent ?? '')" },
       { wait: 1500 },
     ],
   },
