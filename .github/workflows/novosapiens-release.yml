@@ -33,4 +33,6 @@ jobs:
       - name: Create release
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh release create "$GITHUB_REF_NAME" ./*.vsix --title "$GITHUB_REF_NAME" --notes "Novosapiens build of ${GITHUB_SHA::7}. Install: see README."
+        run: |
+          gh release create "$GITHUB_REF_NAME" ./*.vsix --title "$GITHUB_REF_NAME" \
+            --notes "Novosapiens build of ${GITHUB_SHA::7}. Install: see README."
