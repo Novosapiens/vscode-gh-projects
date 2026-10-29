@@ -13,6 +13,9 @@
 > code --install-extension /tmp/ghp/vscode-gh-projects-*.vsix --force
 > ```
 >
+> After that, the extension checks these releases once a day and offers to install a newer one
+> (or run **GitHub Projects: Check for Updates…**; turn off with `ghProjects.checkForUpdates`).
+>
 > `main` follows upstream. To release: bump `version`, push a `novo-v<version>` tag.
 
 Work with **GitHub Projects (v2)** without leaving the editor: the same board, table and roadmap

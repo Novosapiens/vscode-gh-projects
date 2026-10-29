@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- **Check for updates** (Novosapiens build): once a day, or with **GitHub Projects: Check for
+  Updates…**, the extension looks for a newer `novo-v*` release and offers to install it.
+  Turn off with `ghProjects.checkForUpdates`.
+- **Board columns take their option's color**, like github.com.
 - **Board cards show Milestone, Parent issue, Sub-issues progress and Linked pull requests**
   when the board view shows them on github.com (view ⋯ → Fields). Parent and pull request
   numbers open on GitHub.

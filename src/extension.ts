@@ -15,6 +15,7 @@ import type { ProjectDetails, ProjectItem } from './model/types';
 import { Poller } from './views/poller';
 import { StatusBarCounter } from './views/statusBar';
 import { onRateLimit } from './views/notify';
+import { Updater } from './views/updates';
 
 /** Returned by activate(). The `__` members are test/screenshot hooks, not product API. */
 export interface ExtensionApi {
@@ -63,6 +64,9 @@ export function activate(context: vscode.ExtensionContext): ExtensionApi {
   };
 
   const boardDeps = { extensionUri: context.extensionUri, getApi: () => api, workspaceState: context.workspaceState };
+
+  const updater = new Updater(context);
+  void updater.checkInBackground();
 
   const tree = new ProjectsTreeProvider(() => api, context.globalState, setSignedIn);
   const treeView = vscode.window.createTreeView('ghProjects.projects', { treeDataProvider: tree, showCollapseAll: true });
@@ -130,6 +134,7 @@ export function activate(context: vscode.ExtensionContext): ExtensionApi {
         BoardPanel.revive(panel, boardDeps, persisted);
       },
     }),
+    vscode.commands.registerCommand('ghProjects.checkForUpdates', () => updater.check()),
     vscode.commands.registerCommand('ghProjects.openOnGitHub', async (node?: { project?: ProjectSummary }) => {
       if (node?.project) await vscode.env.openExternal(vscode.Uri.parse(node.project.url));
     }),

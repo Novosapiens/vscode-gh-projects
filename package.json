@@ -103,6 +103,11 @@
         "title": "Open Last Board",
         "category": "GitHub Projects",
         "icon": "$(project)"
+      },
+      {
+        "command": "ghProjects.checkForUpdates",
+        "title": "Check for Updates…",
+        "category": "GitHub Projects"
       }
     ],
     "menus": {
@@ -165,6 +170,11 @@
           "type": "string",
           "default": "In progress",
           "markdownDescription": "Column (option of the Status-like field) counted in the status bar for items assigned to you. Case-insensitive."
+        },
+        "ghProjects.checkForUpdates": {
+          "type": "boolean",
+          "default": true,
+          "markdownDescription": "Check the [Novosapiens releases](https://github.com/Novosapiens/vscode-gh-projects/releases) once a day and offer to install a newer version. `GitHub Projects: Check for Updates…` checks at any time."
         }
       }
     }
