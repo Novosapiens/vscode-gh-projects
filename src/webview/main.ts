@@ -938,7 +938,7 @@ function columnView(column: Column, ctx: CardContext): HTMLElement {
   const section = h(
     'section',
     {
-      class: `column${isNone ? ' column-none' : ''}${isNone && column.items.length === 0 ? ' only-while-dragging' : ''}`,
+      class: `column tint-${column.option?.color ?? 'none'}${isNone ? ' column-none' : ''}${isNone && column.items.length === 0 ? ' only-while-dragging' : ''}`,
       'data-column-id': ctx.laneId !== undefined ? `${ctx.laneId}:${column.id}` : column.id,
       'aria-label': column.name,
     },

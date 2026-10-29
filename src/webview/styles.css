@@ -197,6 +197,12 @@ button:focus-visible,
   border-radius: var(--radius);
 }
 
+/* Columns take their option's color: an accent on top and a light tint. */
+.column[class*='tint-'] {
+  border-top: 3px solid var(--option-color);
+  background: color-mix(in srgb, var(--option-color) 7%, var(--vscode-sideBar-background, var(--vscode-editorWidget-background)));
+}
+
 .column-header {
   display: flex;
   align-items: center;
@@ -369,30 +375,51 @@ button:focus-visible,
   border: 2px solid currentColor;
 }
 
+/* `color-*` colors an element; `tint-*` only exposes the color (as --option-color) to its styles. */
 .color-none,
-.color-GRAY {
-  color: var(--vscode-descriptionForeground);
+.color-GRAY,
+.tint-none,
+.tint-GRAY {
+  --option-color: var(--vscode-descriptionForeground);
 }
-.color-BLUE {
-  color: var(--vscode-charts-blue);
+.color-BLUE,
+.tint-BLUE {
+  --option-color: var(--vscode-charts-blue);
 }
-.color-GREEN {
-  color: var(--vscode-charts-green);
+.color-GREEN,
+.tint-GREEN {
+  --option-color: var(--vscode-charts-green);
 }
-.color-YELLOW {
-  color: var(--vscode-charts-yellow);
+.color-YELLOW,
+.tint-YELLOW {
+  --option-color: var(--vscode-charts-yellow);
 }
-.color-ORANGE {
-  color: var(--vscode-charts-orange);
+.color-ORANGE,
+.tint-ORANGE {
+  --option-color: var(--vscode-charts-orange);
 }
-.color-RED {
-  color: var(--vscode-charts-red);
+.color-RED,
+.tint-RED {
+  --option-color: var(--vscode-charts-red);
 }
-.color-PINK {
-  color: var(--vscode-terminal-ansiMagenta);
+.color-PINK,
+.tint-PINK {
+  --option-color: var(--vscode-terminal-ansiMagenta);
 }
+.color-PURPLE,
+.tint-PURPLE {
+  --option-color: var(--vscode-charts-purple);
+}
+.color-none,
+.color-GRAY,
+.color-BLUE,
+.color-GREEN,
+.color-YELLOW,
+.color-ORANGE,
+.color-RED,
+.color-PINK,
 .color-PURPLE {
-  color: var(--vscode-charts-purple);
+  color: var(--option-color);
 }
 
 /* ---- filters ---- */
