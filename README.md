@@ -1,5 +1,20 @@
 # GitHub Projects in VS Code
 
+> **Novosapiens build.** This is the `novosapiens` branch of a fork of
+> [guilletin63/vscode-gh-projects](https://github.com/guilletin63/vscode-gh-projects), published
+> as `novosapiens.vscode-gh-projects` so the Marketplace version can't replace it. It adds
+> milestone, parent, sub-issues and linked pull requests on board cards (to be sent upstream from
+> `feat/card-built-in-fields`). Install the `.vsix` from the
+> [releases](https://github.com/Novosapiens/vscode-gh-projects/releases), after uninstalling
+> `guilletin63.vscode-gh-projects` (both register the same commands):
+>
+> ```bash
+> gh release download -R Novosapiens/vscode-gh-projects --pattern '*.vsix' --dir /tmp/ghp --clobber
+> code --install-extension /tmp/ghp/vscode-gh-projects-*.vsix --force
+> ```
+>
+> `main` follows upstream. To release: bump `version`, push a `novo-v<version>` tag.
+
 Work with **GitHub Projects (v2)** without leaving the editor: the same board, table and roadmap
 views you see at `github.com/users/<owner>/projects/<n>`, with cards you can move.
 

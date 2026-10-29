@@ -1,0 +1,36 @@
+name: Novosapiens release
+
+# Push a tag novo-v<version> (matching package.json) to build the .vsix and attach it to a release.
+on:
+  push:
+    tags: ['novo-v*']
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        timeout-minutes: 5
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Check tag matches package.json
+        run: test "novo-v$(node -p 'require("./package.json").version')" = "$GITHUB_REF_NAME"
+
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run package
+
+      - name: Create release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "$GITHUB_REF_NAME" ./*.vsix --title "$GITHUB_REF_NAME" --notes "Novosapiens build of ${GITHUB_SHA::7}. Install: see README."

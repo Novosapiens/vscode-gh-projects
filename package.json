@@ -1,9 +1,9 @@
 {
   "name": "vscode-gh-projects",
-  "displayName": "GitHub Projects in VS Code",
+  "displayName": "GitHub Projects (Novosapiens)",
   "description": "GitHub Projects (v2) inside VS Code: board, table and roadmap views, drag & drop, filters, item details and an in-progress counter.",
-  "version": "1.4.0",
-  "publisher": "guilletin63",
+  "version": "1.4.1",
+  "publisher": "novosapiens",
   "license": "MIT",
   "icon": "media/icon.png",
   "galleryBanner": {
@@ -12,11 +12,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/guilletin63/vscode-gh-projects.git"
+    "url": "https://github.com/Novosapiens/vscode-gh-projects.git"
   },
-  "homepage": "https://github.com/guilletin63/vscode-gh-projects#readme",
+  "homepage": "https://github.com/Novosapiens/vscode-gh-projects#readme",
   "bugs": {
-    "url": "https://github.com/guilletin63/vscode-gh-projects/issues"
+    "url": "https://github.com/Novosapiens/vscode-gh-projects/issues"
   },
   "engines": {
     "vscode": "^1.99.0"
