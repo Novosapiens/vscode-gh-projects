@@ -58,11 +58,11 @@ Requires VS Code 1.99 or later. If you have the upstream version
 code --uninstall-extension guilletin63.vscode-gh-projects
 ```
 
-Install **GitHub Projects (Novosapiens)** from the
+Install **Novosapiens Projects Board for GitHub** from the
 [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=novosapiens.github-projects-novosapiens):
 
 - In VS Code, open the **Extensions** view (<kbd>Ctrl</kbd>/<kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>X</kbd>),
-  search for **GitHub Projects (Novosapiens)** and choose **Install**, or
+  search for **Novosapiens Projects Board for GitHub** and choose **Install**, or
 - from a terminal:
 
   ```bash

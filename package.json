@@ -1,8 +1,8 @@
 {
   "name": "github-projects-novosapiens",
-  "displayName": "GitHub Projects (Novosapiens)",
-  "description": "GitHub Projects (v2) inside VS Code: board, table and roadmap views, drag & drop, filters, item details and an in-progress counter.",
-  "version": "1.4.5",
+  "displayName": "Novosapiens Projects Board for GitHub",
+  "description": "Fork of guilletin63's GitHub Projects extension with milestone, parent issue, sub-issue and linked-PR details on cards, colored board columns and in-editor updates.",
+  "version": "1.4.6",
   "publisher": "novosapiens",
   "license": "MIT",
   "icon": "media/icon.png",

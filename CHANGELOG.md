@@ -1,8 +1,8 @@
 # Changelog
 
-## 1.4.5
+## 1.4.6
 
-- **On the Marketplace** as `novosapiens.github-projects-novosapiens`, kept up to date by VS Code.
+- **On the Marketplace** as **Novosapiens Projects Board for GitHub**, `novosapiens.github-projects-novosapiens`, kept up to date by VS Code.
   The extension ID changed from `novosapiens.vscode-gh-projects` (the Marketplace needs a name
   of its own): if the old one is installed, the extension offers to uninstall it. Owners you
   added and the last opened board are kept per ID, so add them again.
