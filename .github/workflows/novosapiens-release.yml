@@ -1,7 +1,7 @@
 name: Novosapiens release
 
-# Push a tag novo-v<version> (matching package.json) to build the .vsix, attach it to a release
-# and publish it to the VS Code Marketplace (needs the VSCE_PAT secret).
+# Push a tag novo-v<version> (matching package.json) to build the .vsix, attach it to a release,
+# commit it to vsix/ (latest only) and publish to the VS Code Marketplace (needs VSCE_PAT).
 on:
   push:
     tags: ['novo-v*']
@@ -37,6 +37,20 @@ jobs:
         run: |
           gh release create "$GITHUB_REF_NAME" ./*.vsix --title "$GITHUB_REF_NAME" \
             --notes "Novosapiens build of ${GITHUB_SHA::7}. Install: see README."
+
+      - name: Commit the .vsix to vsix/ on the default branch
+        env:
+          BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          git fetch -q origin "$BRANCH"
+          git checkout -q -B "$BRANCH" "origin/$BRANCH"
+          git rm -q --ignore-unmatch 'vsix/*.vsix'
+          mkdir -p vsix && cp ./*.vsix vsix/
+          git add vsix
+          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
+            commit -q -m "chore: add the $GITHUB_REF_NAME .vsix to vsix/"
+          git push -q origin "$BRANCH"
+          git checkout -q "$GITHUB_SHA"
 
       - name: Publish to VS Code Marketplace
         env:

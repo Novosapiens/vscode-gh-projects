@@ -72,8 +72,8 @@ Install **Novosapiens Projects Board for GitHub** from the
 VS Code keeps the Marketplace version up to date.
 
 **From a `.vsix`.** Each version is also attached to the
-[releases](https://github.com/Novosapiens/vscode-gh-projects/releases). Download
-`gh-vs-projects-board-<version>.vsix`, then in VS Code open the **Extensions** view → **…** →
+[releases](https://github.com/Novosapiens/vscode-gh-projects/releases), and the latest one is in
+[`vsix/`](vsix). Download `gh-vs-projects-board-<version>.vsix`, then in VS Code open the **Extensions** view → **…** →
 **Install from VSIX…** and pick the file. VS Code doesn't update a `.vsix` install from the
 Marketplace, so the extension checks the releases once a day and offers to **Install** a newer
 version. Run **GitHub Projects: Check for Updates…** to check at any time, or set

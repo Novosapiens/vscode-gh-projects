@@ -3,6 +3,7 @@ dist/
 out/
 .vscode-test
 *.vsix
+!vsix/*.vsix
 marketplace/
 coverage/
 .DS_Store
