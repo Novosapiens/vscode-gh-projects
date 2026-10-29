@@ -7,7 +7,7 @@ const LAST_CHECK_KEY = 'ghProjects.lastUpdateCheck';
 const DAY_MS = 24 * 60 * 60 * 1000;
 
 /** Earlier IDs of this build. They register the same commands, so only one can be installed. */
-const OLD_IDS = ['novosapiens.vscode-gh-projects'];
+const OLD_IDS = ['novosapiens.vscode-gh-projects', 'novosapiens.github-projects-novosapiens'];
 
 /** Offers to uninstall an earlier ID of this build, e.g. a .vsix install from before the rename. */
 export async function offerToRemoveOldIds(): Promise<void> {

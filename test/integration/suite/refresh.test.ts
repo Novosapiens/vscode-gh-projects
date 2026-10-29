@@ -18,7 +18,7 @@ suite('refresh and status bar', () => {
   let api: Api;
 
   suiteSetup(async () => {
-    const ext = vscode.extensions.getExtension<Api>('novosapiens.github-projects-novosapiens');
+    const ext = vscode.extensions.getExtension<Api>('novosapiens.gh-vs-projects-board');
     assert.ok(ext);
     api = await ext.activate();
     api.__setApiFactory(createFakeApi);

@@ -13,11 +13,11 @@ npm run typecheck     # tsc --noEmit (extension + webview + tests)
 npm test              # vitest unit tests (fixtures in test/fixtures)
 npm run build         # esbuild -> dist/extension.js + dist/webview.js
 npm run test:integration   # @vscode/test-electron (needs a display; CI uses xvfb-run)
-npm run package       # vsce package -> github-projects-novosapiens-<version>.vsix
+npm run package       # vsce package -> gh-vs-projects-board-<version>.vsix
 ```
 
 Press <kbd>F5</kbd> ("Run Extension") to start an Extension Development Host.
-Install a build with `code --install-extension github-projects-novosapiens-<version>.vsix`.
+Install a build with `code --install-extension gh-vs-projects-board-<version>.vsix`.
 
 ## Workflow
 

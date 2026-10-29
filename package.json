@@ -1,8 +1,8 @@
 {
-  "name": "github-projects-novosapiens",
+  "name": "gh-vs-projects-board",
   "displayName": "Novosapiens Projects Board for GitHub",
   "description": "Fork of guilletin63's GitHub Projects extension with milestone, parent issue, sub-issue and linked-PR details on cards, colored board columns and in-editor updates.",
-  "version": "1.4.6",
+  "version": "1.4.7",
   "publisher": "novosapiens",
   "license": "MIT",
   "icon": "media/icon.png",
