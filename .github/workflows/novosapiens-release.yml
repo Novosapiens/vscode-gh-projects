@@ -1,6 +1,7 @@
 name: Novosapiens release
 
-# Push a tag novo-v<version> (matching package.json) to build the .vsix and attach it to a release.
+# Push a tag novo-v<version> (matching package.json) to build the .vsix, attach it to a release
+# and publish it to the VS Code Marketplace (needs the VSCE_PAT secret).
 on:
   push:
     tags: ['novo-v*']
@@ -36,3 +37,13 @@ jobs:
         run: |
           gh release create "$GITHUB_REF_NAME" ./*.vsix --title "$GITHUB_REF_NAME" \
             --notes "Novosapiens build of ${GITHUB_SHA::7}. Install: see README."
+
+      - name: Publish to VS Code Marketplace
+        env:
+          VSCE_PAT: ${{ secrets.VSCE_PAT }}
+        run: |
+          if [ -z "$VSCE_PAT" ]; then
+            echo "::warning::VSCE_PAT secret not set; skipping Marketplace publish."
+            exit 0
+          fi
+          npx vsce publish --packagePath ./*.vsix

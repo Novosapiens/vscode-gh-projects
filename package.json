@@ -2,7 +2,7 @@
   "name": "vscode-gh-projects",
   "displayName": "GitHub Projects (Novosapiens)",
   "description": "GitHub Projects (v2) inside VS Code: board, table and roadmap views, drag & drop, filters, item details and an in-progress counter.",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "publisher": "novosapiens",
   "license": "MIT",
   "icon": "media/icon.png",
@@ -174,7 +174,7 @@
         "ghProjects.checkForUpdates": {
           "type": "boolean",
           "default": true,
-          "markdownDescription": "Check the [Novosapiens releases](https://github.com/Novosapiens/vscode-gh-projects/releases) once a day and offer to install a newer version. `GitHub Projects: Check for Updates…` checks at any time."
+          "markdownDescription": "For `.vsix` installs: check the [Novosapiens releases](https://github.com/Novosapiens/vscode-gh-projects/releases) once a day and offer to install a newer version. Marketplace installs are updated by VS Code. `GitHub Projects: Check for Updates…` checks at any time."
         }
       }
     }

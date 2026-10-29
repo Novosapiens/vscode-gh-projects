@@ -2,21 +2,13 @@
 
 > **Novosapiens build.** This is the `novosapiens` branch of a fork of
 > [guilletin63/vscode-gh-projects](https://github.com/guilletin63/vscode-gh-projects), published
-> as `novosapiens.vscode-gh-projects` so the Marketplace version can't replace it. It adds
+> on the Marketplace as `novosapiens.vscode-gh-projects` so the upstream version can't replace it. It adds
 > milestone, parent, sub-issues and linked pull requests on board cards (to be sent upstream from
-> `feat/card-built-in-fields`). Install the `.vsix` from the
-> [releases](https://github.com/Novosapiens/vscode-gh-projects/releases), after uninstalling
-> `guilletin63.vscode-gh-projects` (both register the same commands):
+> `feat/card-built-in-fields`), board columns in their option's color, and updates from GitHub
+> releases. See [Installation](#installation).
 >
-> ```bash
-> gh release download -R Novosapiens/vscode-gh-projects --pattern '*.vsix' --dir /tmp/ghp --clobber
-> code --install-extension /tmp/ghp/vscode-gh-projects-*.vsix --force
-> ```
->
-> After that, the extension checks these releases once a day and offers to install a newer one
-> (or run **GitHub Projects: Check for Updates…**; turn off with `ghProjects.checkForUpdates`).
->
-> `main` follows upstream. To release: bump `version`, push a `novo-v<version>` tag.
+> `main` follows upstream. To release: bump `version`, push a `novo-v<version>` tag; the workflow attaches the
+> `.vsix` to a GitHub release and publishes it to the Marketplace.
 
 Work with **GitHub Projects (v2)** without leaving the editor: the same board, table and roadmap
 views you see at `github.com/users/<owner>/projects/<n>`, with cards you can move.
@@ -56,6 +48,39 @@ views you see at `github.com/users/<owner>/projects/<n>`, with cards you can mov
 - Follows your VS Code theme (light, dark and high contrast).
 
 ## Installation
+
+### Novosapiens build
+
+Requires VS Code 1.99 or later. If you have the upstream version
+(`guilletin63.vscode-gh-projects`), uninstall it first: both register the same commands.
+
+```bash
+code --uninstall-extension guilletin63.vscode-gh-projects
+```
+
+Install **GitHub Projects (Novosapiens)** from the
+[Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=novosapiens.vscode-gh-projects):
+
+- In VS Code, open the **Extensions** view (<kbd>Ctrl</kbd>/<kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>X</kbd>),
+  search for **GitHub Projects (Novosapiens)** and choose **Install**, or
+- from a terminal:
+
+  ```bash
+  code --install-extension novosapiens.vscode-gh-projects
+  ```
+
+VS Code keeps the Marketplace version up to date.
+
+**From a `.vsix`.** Each version is also attached to the
+[releases](https://github.com/Novosapiens/vscode-gh-projects/releases). Download
+`vscode-gh-projects-<version>.vsix`, then in VS Code open the **Extensions** view → **…** →
+**Install from VSIX…** and pick the file. VS Code doesn't update a `.vsix` install from the
+Marketplace, so the extension checks the releases once a day and offers to **Install** a newer
+version. Run **GitHub Projects: Check for Updates…** to check at any time, or set
+`ghProjects.checkForUpdates` to `false` to stop the daily check. To switch to the Marketplace
+version, install it as above.
+
+### Marketplace version (upstream)
 
 Install **GitHub Projects in VS Code** from the
 [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=guilletin63.vscode-gh-projects):

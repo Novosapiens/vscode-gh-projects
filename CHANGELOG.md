@@ -1,8 +1,9 @@
 # Changelog
 
-## Unreleased
+## 1.4.3
 
-- **Check for updates** (Novosapiens build): once a day, or with **GitHub Projects: Check for
+- **On the Marketplace** as `novosapiens.vscode-gh-projects`, kept up to date by VS Code.
+- **Check for updates** (`.vsix` installs of the Novosapiens build): once a day, or with **GitHub Projects: Check for
   Updates…**, the extension looks for a newer `novo-v*` release and offers to install it.
   Turn off with `ghProjects.checkForUpdates`.
 - **Board columns take their option's color**, like github.com.
