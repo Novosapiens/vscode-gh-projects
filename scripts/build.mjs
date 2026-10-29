@@ -4,6 +4,8 @@ import { cp, mkdir } from 'node:fs/promises';
 
 const watch = process.argv.includes('--watch');
 const production = process.argv.includes('--production');
+// MARKETPLACE=1 builds the Marketplace version, without updates from GitHub releases.
+const marketplace = process.env.MARKETPLACE === '1';
 
 const common = {
   bundle: true,
@@ -20,6 +22,7 @@ const extension = {
   format: 'cjs',
   target: 'node20',
   external: ['vscode'],
+  define: { MARKETPLACE: String(marketplace) },
 };
 
 const webview = {

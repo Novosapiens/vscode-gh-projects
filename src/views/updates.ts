@@ -28,29 +28,10 @@ export async function offerToRemoveOldIds(): Promise<void> {
   if (reload === 'Reload Window') await vscode.commands.executeCommand('workbench.action.reloadWindow');
 }
 
-interface InstalledExtension {
-  relativeLocation?: string;
-  metadata?: { source?: string };
-}
-
 /**
- * Whether VS Code installed this copy from the Marketplace, which then keeps it updated. Read from
- * the `extensions.json` VS Code keeps next to installed extensions; false when it can't be read.
- */
-async function installedFromMarketplace(context: vscode.ExtensionContext): Promise<boolean> {
-  try {
-    const folder = context.extensionUri.path.split('/').pop();
-    const registry = vscode.Uri.joinPath(context.extensionUri, '..', 'extensions.json');
-    const entries = JSON.parse(new TextDecoder().decode(await vscode.workspace.fs.readFile(registry))) as InstalledExtension[];
-    return entries.some((e) => e.relativeLocation === folder && e.metadata?.source === 'gallery');
-  } catch {
-    return false;
-  }
-}
-
-/**
- * Updates for copies installed from a .vsix, which VS Code pins and never updates from the
- * Marketplace: looks for a newer GitHub release and installs its .vsix when the user agrees.
+ * Updates for the GitHub release build, installed from a .vsix that VS Code never updates: looks
+ * for a newer GitHub release and installs its .vsix when the user agrees. Not in the Marketplace
+ * build, which VS Code updates.
  */
 export class Updater {
   constructor(private readonly context: vscode.ExtensionContext) {}
@@ -62,7 +43,6 @@ export class Updater {
   /** At startup: at most once a day, only speaks up when there is an update. */
   async checkInBackground(): Promise<void> {
     if (!vscode.workspace.getConfiguration('ghProjects').get<boolean>('checkForUpdates', true)) return;
-    if (await installedFromMarketplace(this.context)) return;
     const last = this.context.globalState.get<number>(LAST_CHECK_KEY, 0);
     if (Date.now() - last < DAY_MS) return;
     await this.context.globalState.update(LAST_CHECK_KEY, Date.now());
@@ -76,12 +56,6 @@ export class Updater {
 
   /** From the command: always reports the outcome. */
   async check(): Promise<void> {
-    if (await installedFromMarketplace(this.context)) {
-      void vscode.window.showInformationMessage(
-        'GitHub Projects was installed from the Marketplace, so VS Code keeps it up to date.',
-      );
-      return;
-    }
     let release: Release | undefined;
     try {
       release = await vscode.window.withProgress(

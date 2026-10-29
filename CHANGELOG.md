@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.4.8
+
+- The Marketplace build leaves out updates from GitHub releases (VS Code updates it), including
+  **Check for Updates…** and its setting. The `.vsix` on the GitHub releases keeps them.
+
 ## 1.4.7
 
 - **On the Marketplace** as **Novosapiens Projects Board for GitHub**

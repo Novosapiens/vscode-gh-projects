@@ -46,4 +46,5 @@ jobs:
             echo "::warning::VSCE_PAT secret not set; skipping Marketplace publish."
             exit 0
           fi
-          npx vsce publish --packagePath ./*.vsix
+          npm run package:marketplace
+          npx vsce publish --packagePath marketplace/*.vsix

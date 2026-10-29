@@ -2,7 +2,7 @@
   "name": "gh-vs-projects-board",
   "displayName": "Novosapiens Projects Board for GitHub",
   "description": "Fork of guilletin63's GitHub Projects extension with milestone, parent issue, sub-issue and linked-PR details on cards, colored board columns and in-editor updates.",
-  "version": "1.4.7",
+  "version": "1.4.8",
   "publisher": "novosapiens",
   "license": "MIT",
   "icon": "media/icon.png",
@@ -174,7 +174,7 @@
         "ghProjects.checkForUpdates": {
           "type": "boolean",
           "default": true,
-          "markdownDescription": "For `.vsix` installs: check the [Novosapiens releases](https://github.com/Novosapiens/vscode-gh-projects/releases) once a day and offer to install a newer version. Marketplace installs are updated by VS Code. `GitHub Projects: Check for Updates…` checks at any time."
+          "markdownDescription": "Check the [Novosapiens releases](https://github.com/Novosapiens/vscode-gh-projects/releases) once a day and offer to install a newer version. `GitHub Projects: Check for Updates…` checks at any time."
         }
       }
     }
@@ -187,6 +187,7 @@
     "test": "vitest run",
     "test:integration": "npm run build && tsc -p test/integration/tsconfig.json && node out/test/integration/runTest.js",
     "package": "vsce package --no-dependencies",
+    "package:marketplace": "node scripts/package-marketplace.mjs",
     "vscode:prepublish": "npm run build -- --production",
     "screenshot": "node scripts/screenshot.mjs",
     "drag-check": "node scripts/drag-check.mjs",

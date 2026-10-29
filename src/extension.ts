@@ -65,9 +65,13 @@ export function activate(context: vscode.ExtensionContext): ExtensionApi {
 
   const boardDeps = { extensionUri: context.extensionUri, getApi: () => api, workspaceState: context.workspaceState };
 
-  void offerToRemoveOldIds();
-  const updater = new Updater(context);
-  void updater.checkInBackground();
+  // Updates from GitHub releases are left out of the Marketplace build: VS Code updates it.
+  if (!MARKETPLACE) {
+    void offerToRemoveOldIds();
+    const updater = new Updater(context);
+    void updater.checkInBackground();
+    context.subscriptions.push(vscode.commands.registerCommand('ghProjects.checkForUpdates', () => updater.check()));
+  }
 
   const tree = new ProjectsTreeProvider(() => api, context.globalState, setSignedIn);
   const treeView = vscode.window.createTreeView('ghProjects.projects', { treeDataProvider: tree, showCollapseAll: true });
@@ -135,7 +139,6 @@ export function activate(context: vscode.ExtensionContext): ExtensionApi {
         BoardPanel.revive(panel, boardDeps, persisted);
       },
     }),
-    vscode.commands.registerCommand('ghProjects.checkForUpdates', () => updater.check()),
     vscode.commands.registerCommand('ghProjects.openOnGitHub', async (node?: { project?: ProjectSummary }) => {
       if (node?.project) await vscode.env.openExternal(vscode.Uri.parse(node.project.url));
     }),
