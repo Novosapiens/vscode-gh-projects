@@ -31,7 +31,7 @@ suite('board webview', () => {
   let api: Api;
 
   suiteSetup(async () => {
-    const ext = vscode.extensions.getExtension<Api>('guilletin63.vscode-gh-projects');
+    const ext = vscode.extensions.getExtension<Api>('novosapiens.vscode-gh-projects');
     assert.ok(ext);
     api = await ext.activate();
     api.__setApiFactory(createFakeApi);
