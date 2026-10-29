@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- **Board cards show Milestone, Parent issue, Sub-issues progress and Linked pull requests**
+  when the board view shows them on github.com (view ⋯ → Fields). Parent and pull request
+  numbers open on GitHub.
+
 ## 1.4.0
 
 - **Edit assignees and labels** from the item details: **Edit** opens a searchable list of the

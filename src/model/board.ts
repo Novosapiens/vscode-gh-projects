@@ -65,3 +65,26 @@ export function buildColumns(
 export function cardFields(fields: ProjectField[], groupFieldId: string | undefined): ProjectField[] {
   return fields.filter((f) => f.kind !== 'builtin' && f.id !== groupFieldId);
 }
+
+/** Built-in fields a card can show, keyed by GitHub's field type. */
+const CARD_BUILTINS = {
+  MILESTONE: 'milestone',
+  PARENT_ISSUE: 'parent',
+  SUB_ISSUES_PROGRESS: 'subIssues',
+  LINKED_PULL_REQUESTS: 'linkedPullRequests',
+} as const;
+
+export type CardBuiltin = (typeof CARD_BUILTINS)[keyof typeof CARD_BUILTINS];
+
+/**
+ * Built-in fields the view shows on its cards, in the view's order, like github.com. Views that
+ * don't expose their fields show none.
+ */
+export function cardBuiltins(fields: ProjectField[], view?: ProjectView): CardBuiltin[] {
+  const byId = new Map(fields.map((f) => [f.id, f]));
+  return (view?.visibleFieldIds ?? []).flatMap((id) => {
+    const field = byId.get(id);
+    const kind = field?.kind === 'builtin' ? CARD_BUILTINS[field.dataType as keyof typeof CARD_BUILTINS] : undefined;
+    return kind ? [kind] : [];
+  });
+}

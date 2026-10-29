@@ -1,6 +1,6 @@
 // Board webview. Renders the BoardState sent by the extension; never talks to the network.
-import { NO_VALUE_COLUMN, buildColumns, cardFields, resolveGroupField } from '../model/board';
-import type { Column } from '../model/board';
+import { NO_VALUE_COLUMN, buildColumns, cardBuiltins, cardFields, resolveGroupField } from '../model/board';
+import type { CardBuiltin, Column } from '../model/board';
 import { MAX_ASSIGNEES } from '../model/assign';
 import type { FieldInput, ListEdit } from '../model/edits';
 import { PendingEdits, afterIdFor, isSameValue } from '../model/edits';
@@ -843,6 +843,7 @@ function boardView(board: BoardState, visible: ProjectItem[]): HTMLElement {
   const fields = cardFields(project.fields, groupField?.id).filter((f) => f.id !== laneField?.id);
   const base = {
     fields,
+    builtins: cardBuiltins(project.fields, view),
     movable: !!groupField,
     orderable: !sort?.length,
     numberFields: project.fields.filter((f) => f.kind === 'number'),
@@ -897,6 +898,8 @@ function boardColumns(items: ProjectItem[], groupField: ProjectField | undefined
 
 interface CardContext {
   fields: ProjectField[];
+  /** Built-in fields the view shows on cards (milestone, parent, sub-issues, linked PRs). */
+  builtins: CardBuiltin[];
   columns: Column[];
   /** False when the board has no single-select field to move along. */
   movable: boolean;
@@ -1050,6 +1053,8 @@ function cardView(item: ProjectItem, column: Column, ctx: CardContext): HTMLElem
   const chips = values.length
     ? h('ul', { class: 'fields', 'aria-label': 'Fields' }, values.map(([f, v]) => fieldChip(f, v)))
     : null;
+  const builtins = ctx.builtins.flatMap((b) => builtinChip(item, b) ?? []);
+  const related = builtins.length ? h('ul', { class: 'fields card-builtins', 'aria-label': 'Related' }, builtins) : null;
 
   const assignees = assigneeList(item);
 
@@ -1068,6 +1073,7 @@ function cardView(item: ProjectItem, column: Column, ctx: CardContext): HTMLElem
     h('div', { class: 'card-title' }, item.title),
     labels,
     chips,
+    related,
     assignees ? h('div', { class: 'card-footer' }, assignees) : null,
   );
   card.addEventListener('click', (e) => {
@@ -1096,6 +1102,36 @@ function cardView(item: ProjectItem, column: Column, ctx: CardContext): HTMLElem
     }
   });
   return card;
+}
+
+/** A built-in field on a card, or null when the item has no value for it. */
+function builtinChip(item: ProjectItem, builtin: CardBuiltin): HTMLElement | null {
+  const open = (text: string, url: string) => {
+    const b = h('button', { type: 'button', class: 'link-button', title: url }, text);
+    b.addEventListener('click', () => send({ type: 'openExternal', url }));
+    return b;
+  };
+  switch (builtin) {
+    case 'milestone':
+      return item.milestone ? h('li', { class: 'field-chip', title: `Milestone: ${item.milestone}` }, h('span', { class: 'field-name' }, 'Milestone:'), ` ${item.milestone}`) : null;
+    case 'parent': {
+      const parent = item.parent;
+      if (!parent) return null;
+      const ref = `#${parent.number}`;
+      return h('li', { class: 'field-chip', title: `Parent: ${parent.title} ${ref}` }, h('span', { class: 'field-name' }, 'Parent:'), ' ', parent.url ? open(ref, parent.url) : ref);
+    }
+    case 'subIssues': {
+      if (!item.subIssues) return null;
+      const { completed, total } = item.subIssues;
+      const bar = h('span', { class: 'progress', 'aria-hidden': 'true' }, h('span', { class: 'progress-done' }));
+      (bar.firstChild as HTMLElement).style.setProperty('width', `${Math.round((completed / total) * 100)}%`);
+      return h('li', { class: 'field-chip sub-issues', title: `${completed} of ${total} sub-issues done` }, bar, `${completed}/${total}`);
+    }
+    case 'linkedPullRequests': {
+      const prs = item.linkedPullRequests ?? [];
+      return prs.length ? h('li', { class: 'field-chip pr-link', title: 'Linked pull requests' }, icons.pr(), ...prs.map((pr) => open(`#${pr.number}`, pr.url))) : null;
+    }
+  }
 }
 
 function fieldChip(field: ProjectField, value: FieldValue): HTMLElement {

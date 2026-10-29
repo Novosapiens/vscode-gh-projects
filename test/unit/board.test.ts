@@ -1,8 +1,8 @@
 import { describe, expect, it } from 'vitest';
 import { mapItems, mapProjectDetails } from '../../src/api/mappers';
 import type { RawItemsResponse, RawProjectDetailsResponse } from '../../src/api/raw';
-import { NO_VALUE_COLUMN, buildColumns, cardFields, defaultView, resolveGroupField } from '../../src/model/board';
-import type { ProjectField, ProjectItem } from '../../src/model/types';
+import { NO_VALUE_COLUMN, buildColumns, cardBuiltins, cardFields, defaultView, resolveGroupField } from '../../src/model/board';
+import type { ProjectField, ProjectItem, ProjectView } from '../../src/model/types';
 import { fixture } from './fixtures';
 
 const select = (id: string, name: string, options: string[]): ProjectField => ({
@@ -90,6 +90,24 @@ describe('cardFields / defaultView', () => {
       select('P', 'Priority', []),
     ];
     expect(cardFields(fields, 'S').map((f) => f.id)).toEqual(['P']);
+  });
+
+  it('shows the built-in fields the view shows, in its order', () => {
+    const builtin = (id: string, dataType: string): ProjectField => ({ id, name: id, dataType, kind: 'builtin' });
+    const fields: ProjectField[] = [
+      builtin('title', 'TITLE'),
+      builtin('ms', 'MILESTONE'),
+      builtin('pr', 'LINKED_PULL_REQUESTS'),
+      builtin('parent', 'PARENT_ISSUE'),
+      builtin('subs', 'SUB_ISSUES_PROGRESS'),
+      builtin('rev', 'REVIEWERS'),
+      select('S', 'Status', []),
+    ];
+    const view = (visibleFieldIds?: string[]): ProjectView => ({ id: 'v', number: 1, name: 'Board', layout: 'board', filter: '', ...(visibleFieldIds ? { visibleFieldIds } : {}) });
+    expect(cardBuiltins(fields, view(['title', 'pr', 'S', 'rev', 'ms', 'subs', 'parent']))).toEqual(['linkedPullRequests', 'milestone', 'subIssues', 'parent']);
+    expect(cardBuiltins(fields, view(['title', 'S']))).toEqual([]);
+    expect(cardBuiltins(fields, view())).toEqual([]);
+    expect(cardBuiltins(fields)).toEqual([]);
   });
 
   it('picks the first board view', () => {
